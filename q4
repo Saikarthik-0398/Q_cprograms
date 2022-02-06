@@ -1,0 +1,38 @@
+#include<stdio.h>
+int main(){
+int a,i,k,first,last,mid,num=0,m=0;
+printf("enter the number of elements :");
+scanf("%d",&a);
+int n[a];
+printf("enter %d elements :\n",a);
+for(i=0;i<a;i++){
+ scanf("%d",&n[i]);                                      
+}                                                        
+printf("enter the number to search :");                     
+scanf("%d",&k);
+first=0;
+last=a;
+mid=(first+last)/2;
+while(num<a){
+  if(k==n[mid]){
+  	printf("%d is found at location %d",k,mid+1);
+  	m++;
+  	break;
+  }	
+ else if(k>n[mid]){
+ 	first=mid+1;
+ 	last=a;
+ 	mid=(first+last)/2;
+ }
+ else if(k<n[mid]){
+ 	first=0;
+ 	last=mid-1;
+ 	mid=(first+last)/2;
+ }
+ num++;
+}
+if(m==0){
+	printf("%d is not found in list ",k);
+}
+
+}
