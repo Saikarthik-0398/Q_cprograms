@@ -1,0 +1,21 @@
+#include<stdio.h>
+int sum(int *p,int *q){
+	return *p+*q;
+}
+int minus(int*p,int*q){
+	return *p-*q;
+}
+int pro(int *p,int *q){
+	return (*p)*(*q);
+}
+int div(int*p,int*q){
+	return (*p)/(*q);
+}
+int mod(int*p,int*q){
+	return *p%*q;
+}
+int main(){
+int a,b;
+scanf("%d%d",&a,&b);
+printf("%d %d %d %d %d",sum(&a,&b),minus(&a,&b),pro(&a,&b),div(&a,&b),mod(&a,&b));
+}
